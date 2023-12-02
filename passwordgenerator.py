@@ -248,7 +248,7 @@ def second_tab():
         return (string[7:-12])[::-1]
 
     def ask_for_file():
-        filepath = filedialog.askopenfilename(initialdir="/home/zbos/Password Generator", title="Find Password File", filetypes=(("Text Files","*.txt"), ("All Files", "*.*")))
+        filepath = filedialog.askopenfilename(title="Find Password File", filetypes=(("Text Files","*.txt"), ("All Files", "*.*")))
         file = open(filepath, "r")
         file_read_label.config(text=decrypt(file.read()))
         file.close()
@@ -256,7 +256,7 @@ def second_tab():
 
     def encrypt_and_save():
         global encrypted_filetext
-        file = filedialog.asksaveasfile(initialdir="/home/zbos/Password Generator", defaultextension=".txt", filetypes=[("Text Files",".txt")])
+        file = filedialog.asksaveasfile(defaultextension=".txt", filetypes=[("Text Files",".txt")])
         filetext = str(password_text.get())
         encrypted_filetext = encrypt(filetext)
         file.write(encrypted_filetext)
