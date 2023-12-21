@@ -1,6 +1,6 @@
 # pythonpasswordgenerator
 
-Make a new folder called "Password Generator"
+Make a new folder called "Password Generator" for it
 
 the most advanced and unnescesary password generator ever created
 
